@@ -64,9 +64,9 @@ let total
 const sumarEnvio = () =>{
     if (total <= 4000){
         total = total + 500;
-        alert(`El total con envío es de $ ${total}. Gracias por tu compra!`)
+        alert(`El total con envío es de $${total}. Gracias por tu compra!`)
     }else{
-        alert("El envío es gratis. Gracias por tu compra!")
+        alert(`El envío es gratis \nTotal de tu compra: $${total} \nGracias por tu compra!`)
     }
 }
 
