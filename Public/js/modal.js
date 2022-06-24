@@ -1,4 +1,4 @@
-const carritoAbrir = document.getElementById('boton-buscador');
+const carritoAbrir = document.getElementById('boton-carrito');
 const carritoCerrar = document.getElementById('carritoCerrar');
 
 const contenedorModal = document.getElementsByClassName('contenedor')[0]

@@ -22,6 +22,7 @@
   h1 {
     color: rgba(19, 47, 227, 0.618);
     text-transform: uppercase;
+    font-family: 'Monstserrat';
     font-weight: 700;
     font-size: 50px;
   }
@@ -43,7 +44,7 @@
   #boton-carrito:hover {
     cursor: pointer;
     color: white;
-    background-color: rgb(225, 76, 65);
+    background-color: rgba(23, 43, 224, 0.59);
   }
   #boton-carrito:focus {
     outline: none;
@@ -107,7 +108,7 @@
   }
   
   .modal-carrito h3 {
-    color: rgb(225, 76, 65);
+    color: rgba(22, 51, 167, 0.485);
     padding-bottom: 5px;
   }
   .modal-carrito #carritoCerrar {
@@ -115,7 +116,7 @@
     top: 15px;
     right: 15px;
     font-size: 20px;
-    color: rgb(225, 76, 65);
+    color: rgba(22, 51, 167, 0.485);
     border: none;
     background-color: white;
   }
@@ -129,7 +130,7 @@
     padding-top: 10px;
   }
   .card .card-image .card-title {
-    color: rgb(225, 76, 65);
+    color: #4171e1;
     position: unset;
   }
   
@@ -143,7 +144,7 @@
     justify-content: space-between;
   }
   .productoEnCarrito:hover {
-    border-left: 5px solid rgb(225, 76, 65);
+    border-left: 5px solid rgba(22, 51, 167, 0.485);
   }
   
   .boton-eliminar {
