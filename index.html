@@ -6,92 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Carrito</title>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="/Public/css/styles.css">
 </head>
 <body>
-    <h1 class="text-center">Tienda JS</h1>
-    <section class="row">
-        <h2 class="text-center">Remeras</h2>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Remera clasica 2.jpg" alt="Remera">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Remera estampada.jpg" alt="Remera">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Remera bordada.jpg" alt="Remera bordada">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
-    </section>
-    <section class="row">
-        <h2 class="text-center">Pantalones</h2>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Pantalon Jogger.jpg" alt="Pantalon Jogger">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a> 
-            </div>
-        </div>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Pantalon jean.jpg" alt="Pantalon Jean">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Jean clasico.jpg" alt="Pantalon Jean Clasico">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
+    <header>
+        <h1 class="text-center">Tienda JS</h1>
+        <input type="text" id="search" class="buscador" placeholder="¿Qué estas buscando?">
+        <button id="boton-buscador"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+    <div class="seleccion">
+        <select id="selecTalles">
+            <option value="all">Todos</option>
+            <option value="L">Large</option>
+            <option value="M">Medium</option>
+            <option value="S">Small</option>
+        </select>
+    </div>
+    <main id="Contenedor-productos">
 
-    </section>
-    <section class="row">
-        <h2 class="text-center">Gorras</h2>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Gorra con logo.jpg" alt="Gorra">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
+    </main>
+    <div class="contenedor">
+        <div class="carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="Carrito-contenedor">
+
             </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
         </div>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Remera bordada.jpg" alt="Gorra">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
-        <div class="card col-4">
-            <img class="card-img-top" src="./img/Gorra lisa.jpg" alt="Gorra">
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed fugit eaque enim, tenetur fuga corporis asperiores sit architecto accusamus ipsam nostrum quod reiciendis excepturi.</p>
-                <a href="" class="btn btn-primary"></a>
-            </div>
-        </div>
-    </section>
+    </div>
+    <script src="/Public/js/stock.js"></script>
+    <script src="/Public/js/modal.js"></script>
     <script src="/Public/js/carrito.js"></script> 
 </body>
-    
 </html>
