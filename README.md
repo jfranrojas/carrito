@@ -1,2 +1,2 @@
-# carrito
-Carrito de compras con js
+
+Carrito de compras con javascript

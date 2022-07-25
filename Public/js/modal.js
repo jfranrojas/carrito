@@ -1,8 +1,8 @@
 const carritoAbrir = document.getElementById('boton-carrito');
 const carritoCerrar = document.getElementById('carritoCerrar');
 
-const contenedorModal = document.getElementsByClassName('contenedor')[0]
-const modalCarrito = document.getElementsByClassName('carrito')[0]
+const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
+const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
 
 carritoAbrir.addEventListener('click', ()=> {
     contenedorModal.classList.toggle('modal-active')
