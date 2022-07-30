@@ -61,6 +61,16 @@ export const renderProductosCarrito = (carritoDeCompras) => {
                     `
     contenedor.appendChild(div);
   });
+
+  const finalizar = document.getElementById("finalizar");
+  finalizar.addEventListener('click', () => {
+    Swal.fire({
+      icon: 'success',
+      title: 'Gracias por tu compra!',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  })
 };
 
 export const obtenerCarritoStorage = () => {
