@@ -57,22 +57,30 @@ export const renderProductosCarrito = (carritoDeCompras) => {
     div.innerHTML = ` <p>${producto.nombre}</p>
                       <p>Precio:${producto.precio}</p>
                       <p id=cantidad${producto.id}>Cantidad:${producto.cantidad}</p>
-                      <button id=eliminar${producto.id} class="btn waves-effect waves-light boton-eliminar" value="${producto.id}">X</button>
+                      <button id=eliminar${producto.id} class="btn bi bi-trash3 boton-eliminar" value="${producto.id}">X</button>
                     `
     contenedor.appendChild(div);
   });
 
   const finalizar = document.getElementById("finalizar");
   finalizar.addEventListener('click', () => {
-    Swal.fire({
-      icon: 'success',
-      title: 'Gracias por tu compra!',
-      showConfirmButton: false,
-      timer: 1500
-    })
-  })
-};
-
+    carritoDeCompras.length == 0 ?
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+         text: 'El carrito esta vacío',
+       })  
+        :
+          Swal.fire({
+            position: 'top',
+              icon: 'success',
+              title: 'Gracias por tu compra!',
+              showConfirmButton: false,
+              timer: 1500
+            })
+        })
+  
+} 
 export const obtenerCarritoStorage = () => {
   const carritoStorage = JSON.parse(localStorage.getItem("carrito"))
   return carritoStorage;
