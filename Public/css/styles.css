@@ -163,7 +163,7 @@ select {
 
 .boton-eliminar {
   background-color: white;
-  color: #ff696180;
+  color: #00000080;
   border: none;
   font-size: 20px;
 }
@@ -175,9 +175,10 @@ select {
 .boton-eliminar:focus {
   outline: none;
 }
-.btn-floating i{
+.btn-floating {
   color: #34495E ;
   background-color: rgb(96, 161, 240);
+  width: 80%;
 }
 .realizar-pago{
   cursor: pointer;
@@ -185,4 +186,12 @@ select {
   color: #1d73e3ad;
   border: none;
   font-size: 20px;
+}
+.agregar-carrito{
+  cursor: pointer;
+  background-color: rgb(48, 68, 106);
+  color: #f7f7f7e6;
+  border: none;
+  font-size: 12px;
+  text-decoration: none;
 }

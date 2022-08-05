@@ -10,8 +10,9 @@ export const mostrarProductos = async () => {
     div.classList.add('card');
     div.innerHTML += `<div class="card-image">
                         <img src=${producto.img}>
-                        <span class="card-title">${producto.nombre}</span>
-                        <a class="btn-floating bi bi-bag-plus" id=boton${producto.id}><i class="material-icons">add_shopping_cart</i></a>
+                        <span class="card-title text-center">${producto.nombre}</span>
+                        <br></br>
+                        <button id=boton${producto.id} class="agregar-carrito text-center">Agregar al carrito</button>
                       </div>
                       <div class="card-content">
                           <p>${producto.desc}</p>

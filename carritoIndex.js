@@ -1,5 +1,8 @@
 import { actualizarCarrito } from "./actualizarCarrito.js";
+import { mostrarProductos } from "./App.js";
 import { productos } from "./stock.js";
+import { contadorCarrito } from "./actualizarCarrito.js";
+import { precioTotal } from "./actualizarCarrito.js";
 
 export const carritoIndex = (productoId) => {
   let carritoDeCompras = [];
@@ -57,7 +60,7 @@ export const renderProductosCarrito = (carritoDeCompras) => {
     div.innerHTML = ` <p>${producto.nombre}</p>
                       <p>Precio:${producto.precio}</p>
                       <p id=cantidad${producto.id}>Cantidad:${producto.cantidad}</p>
-                      <button id=eliminar${producto.id} class="btn bi bi-trash3 boton-eliminar" value="${producto.id}">X</button>
+                      <button id=eliminar${producto.id} class="btn boton-eliminar" value="${producto.id}"><i class="fas fa-trash-alt"></i></button>
                     `
     contenedor.appendChild(div);
   });
@@ -80,9 +83,22 @@ export const renderProductosCarrito = (carritoDeCompras) => {
             })
         })
   
+  const vaciar = document.getElementById("borrar");
+    vaciar.addEventListener('click', ()=>{
+      carritoDeCompras.length = 0
+      localStorage.clear()
+      contenedor.innerHTML = ""
+      precioTotal.innerHTML = "0"
+      contadorCarrito.innerHTML = "0"
+      mostrarProductos()
+      
+    })
 } 
+
 export const obtenerCarritoStorage = () => {
   const carritoStorage = JSON.parse(localStorage.getItem("carrito"))
   return carritoStorage;
 }
+
+
 
